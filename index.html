@@ -1,0 +1,793 @@
+/* Experience Card Images */
+        .experience-card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #f8f9fa;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 2px solid #F7B2B7;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: linear-gradient(135deg, rgba(247, 178, 183, 0.05) 0%, rgba(247, 113, 125, 0.05) 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .gallery-section h3 {
+            font-size: 2.5rem;
+            color: #7F2982;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'Satisfy', cursive;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-item {
+            height: 250px;
+            background-color: #f8f9fa;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            border: 2px solid #F7B2B7;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(247, 178, 183, 0.3);
+        }
+
+        /* About Section Image */
+        .about-image-holder {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            background-color: #f8f9fa;
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            border: 2px solid #F7717D;
+            margin: 2rem auto;
+            box-shadow: 0 8px 32px rgba(22, 0, 30, 0.1);
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Treasures - DIY Charm & Beading Experiences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Satisfy', cursive;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #2D1B3D;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(45, 27, 61, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #F7B2B7;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(127, 41, 130, 0.8) 0%, rgba(222, 99, 154, 0.8) 100%), url('your-hero-image.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 150px 2rem 100px;
+            margin-top: 80px;
+            position: relative;
+            min-height: 500px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #F7717D;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #F7B2B7;
+            color: #2D1B3D;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 4px 20px rgba(247, 178, 183, 0.4);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(247, 178, 183, 0.6);
+            background: #F7717D;
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            color: #DE639A;
+            text-shadow: none;
+            font-weight: 400;
+        }
+
+        .section p {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Experience Cards */
+        .experience-section {
+            margin-bottom: 4rem;
+        }
+
+        .experience-title {
+            font-size: 2.5rem;
+            color: #7F2982;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-family: 'Satisfy', cursive;
+        }
+
+        .experience-subtitle {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .experience-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(22, 0, 30, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #F7B2B7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #DE639A;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(247, 178, 183, 0.3);
+        }
+
+        .experience-card h3 {
+            font-size: 1.8rem;
+            color: #2D1B3D;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .age-group {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card .description {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-card .features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-card .features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+            color: #333;
+        }
+
+        .experience-card .features li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            color: #F7717D;
+        }
+
+        .experience-card .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #DE639A;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card .minimum {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* What's Included Section */
+        .whats-included {
+            background: linear-gradient(135deg, rgba(247, 178, 183, 0.1) 0%, rgba(247, 113, 125, 0.1) 100%);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .whats-included h3 {
+            font-size: 2.2rem;
+            color: #7F2982;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .included-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #F7B2B7;
+            text-align: center;
+        }
+
+        .included-item strong {
+            color: #DE639A;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Add-ons Section */
+        .addons-section {
+            background: linear-gradient(135deg, #F7B2B7 0%, rgba(247, 178, 183, 0.1) 100%);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            border: 3px solid #F7717D;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .addons-section h3 {
+            color: #7F2982;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .addon-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #DE639A;
+        }
+
+        .addon-item strong {
+            color: #7F2982;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(247, 178, 183, 0.1) 0%, rgba(247, 113, 125, 0.1) 100%);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .contact-section h3 {
+            font-size: 2.2rem;
+            color: #7F2982;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .contact-item strong {
+            color: #DE639A;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .delivery-options {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .delivery-options h4 {
+            color: #7F2982;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .delivery-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #F7B2B7;
+        }
+
+        /* Footer */
+        footer {
+            background: #2D1B3D;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-top: 4px solid #F7B2B7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .experience-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 60px 1rem;
+            }
+
+            .experience-title {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Tiny Treasures</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to Tiny Treasures</h1>
+        <p>Create custom jewelry and accessories with your besties!</p>
+        <a href="#contact" class="cta-button">Book Your Experience</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Tiny Treasures</h2>
+        <p>All kits include unique charms, premium beads, step-by-step directions, and professional tools.</p>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="about-image-holder" style="background-image: url('about-jewelry-making.jpg');"></div>
+            <p style="font-size: 1.2rem; line-height: 1.8; font-style: normal;">We specialize in bringing the joy of handcrafted jewelry-making directly to your celebration. Whether you're planning a bachelorette party, birthday celebration, or just want to spend quality time with loved ones, our carefully curated DIY kits make it easy for everyone to create beautiful, personalized pieces they'll treasure forever.</p>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+            <h3>✨ See Our Creations</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('gallery-charm-bracelets.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('gallery-bag-charms.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('gallery-beaded-charms.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('gallery-party-setup.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('gallery-finished-pieces.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('gallery-group-crafting.jpg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="section">
+        <h2>DIY Charm & Beading Experiences</h2>
+
+        <!-- Bachelorette & Girls' Night -->
+        <div class="experience-section">
+            <h3 class="experience-title">🎉 Bachelorette & Girls' Night Experiences</h3>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="experience-card-image" style="background-image: url('charm-bar-full-experience.jpg');"></div>
+                    <h3>✨ Full Charm Bar Experience</h3>
+                    <div class="age-group">Perfect for bachelorette parties, bridal showers, and girls' nights</div>
+                    <div class="description">
+                        <strong>Charm Bracelets:</strong> Create personalized charm bracelets with meaningful symbols<br>
+                        <strong>Bag Charms:</strong> Design matching bag charms to commemorate the celebration
+                    </div>
+                    <ul class="features">
+                        <li>Premium charm selection including initials, birthstones, and themed pieces</li>
+                        <li>Choice of gold, silver, or rose gold findings</li>
+                        <li>Keepsake packaging for each guest</li>
+                    </ul>
+                    <div class="price">Starting at $45 per person</div>
+                    <div class="minimum">(minimum 6 guests)</div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-card-image" style="background-image: url('charm-bracelets-only.jpg');"></div>
+                    <h3>💫 Charm Bracelets Only</h3>
+                    <div class="age-group">Perfect for focused bracelet-making sessions</div>
+                    <div class="description">Create personalized charm bracelets with meaningful symbols and memories</div>
+                    <ul class="features">
+                        <li>Premium charm selection including initials, birthstones, and themed pieces</li>
+                        <li>Choice of gold, silver, or rose gold findings</li>
+                        <li>Focus on bracelet design and personalization</li>
+                    </ul>
+                    <div class="price">Starting at $35 per person</div>
+                    <div class="minimum">(minimum 6 guests)</div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-card-image" style="background-image: url('bag-charms-only.jpg');"></div>
+                    <h3>👜 Bag Charms Only</h3>
+                    <div class="age-group">Perfect for creating memorable keepsakes</div>
+                    <div class="description">Design beautiful bag charms to commemorate your special celebration</div>
+                    <ul class="features">
+                        <li>Premium charm selection including initials, birthstones, and themed pieces</li>
+                        <li>Choice of gold, silver, or rose gold findings</li>
+                        <li>Focus on bag charm design and customization</li>
+                    </ul>
+                    <div class="price">Starting at $30 per person</div>
+                    <div class="minimum">(minimum 6 guests)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bag Charm Workshops -->
+        <div class="experience-section">
+            <h3 class="experience-title">👜 Bag Charm Workshops</h3>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="experience-card-image" style="background-image: url('beaded-bag-charms.jpg');"></div>
+                    <h3>🌈 Beaded Bag Charms</h3>
+                    <div class="age-group">Ages 12+ | DIY craft experience with endless possibilities</div>
+                    <div class="description">Create colorful beaded bag charms with personality</div>
+                    <ul class="features">
+                        <li>350+ premium beads including alphabet letters, numbers, hearts, and zodiac signs</li>
+                        <li>Multiple paracord bases with dual strands for creative designs</li>
+                        <li>Organized crafting case keeps everything sorted</li>
+                        <li>Make multiple charms with countless design combinations</li>
+                    </ul>
+                    <div class="price">$35 per person</div>
+                    <div class="minimum">(minimum 4 guests)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kids' Creative Parties -->
+        <div class="experience-section">
+            <h3 class="experience-title">🌸 Kids' Creative Parties</h3>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="experience-card-image" style="background-image: url('kids-little-makers.jpg');"></div>
+                    <h3>🎨 Little Makers Workshop</h3>
+                    <div class="age-group">Ages 6-12 | Perfect for birthday parties</div>
+                    <div class="description">
+                        <strong>Beaded Bracelets:</strong> Easy elastic cord bracelets with fun, chunky beads<br>
+                        <strong>Simple Bag Charms:</strong> Kid-friendly bag charms for backpacks and lunch boxes
+                    </div>
+                    <ul class="features">
+                        <li>Bright, colorful bead selection designed for small hands</li>
+                        <li>Child-safe tools and materials</li>
+                        <li>Activity takes 60-90 minutes</li>
+                    </ul>
+                    <div class="price">$25 per child</div>
+                    <div class="minimum">(minimum 6 kids)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What's Included -->
+        <div class="whats-included">
+            <h3>📦 What's Included in Every Kit</h3>
+            <div class="included-grid">
+                <div class="included-item">
+                    <strong>Premium Materials</strong>
+                    Carefully curated beads, charms, and findings
+                </div>
+                <div class="included-item">
+                    <strong>Professional Tools</strong>
+                    Pliers, cutters, measuring tools, and organizers
+                </div>
+                <div class="included-item">
+                    <strong>Step-by-Step Guides</strong>
+                    Easy-to-follow instructions with photos
+                </div>
+                <div class="included-item">
+                    <strong>Individual Stations</strong>
+                    Personal crafting tray for each guest
+                </div>
+                <div class="included-item">
+                    <strong>Display Setup</strong>
+                    Jewelry display to elevate the experience
+                </div>
+                <div class="included-item">
+                    <strong>Setup & Cleanup</strong>
+                    Everything arrives organized and ready to use
+                </div>
+            </div>
+        </div>
+
+        <!-- Add-ons -->
+        <div class="addons-section">
+            <h3>🚀 Add-Ons & Upgrades</h3>
+            <div class="addons-grid">
+                <div class="addon-item">
+                    <strong>Custom Beaded Bag Charms</strong>
+                    $15 - $35 per charm<br>
+                    <em>Individual handcrafted beaded charms with crystals, stones, glass beads</em>
+                </div>
+                <div class="addon-item">
+                    <strong>Metal Charm Keychains</strong>
+                    $25 - $55 per charm<br>
+                    <em>Jewelry-style charms with enamel, monograms, premium finishes</em>
+                </div>
+                <div class="addon-item">
+                    <strong>Extra Charms</strong>
+                    $5-12 each
+                </div>
+                <div class="addon-item">
+                    <strong>Birthstone Upgrades</strong>
+                    Premium gemstone options
+                </div>
+                <div class="addon-item">
+                    <strong>Luxury Metal Finishes</strong>
+                    14k gold-filled or sterling silver
+                </div>
+                <div class="addon-item">
+                    <strong>Custom Stamping</strong>
+                    Personalized messages ($8 per piece)
+                </div>
+                <div class="addon-item">
+                    <strong>Gift Packaging</strong>
+                    Upgraded presentation boxes
+                </div>
+                <div class="addon-item">
+                    <strong>Photo Props</strong>
+                    Themed decorations and signage
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="contact-section">
+            <h3>📞 Book Your Experience</h3>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;"><strong>Ready to create unforgettable memories?</strong></p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>📧 Email</strong>
+                    hello@tinytreasures.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱 Phone</strong>
+                    (555) 123-GEMS
+                </div>
+                <div class="contact-item">
+                    <strong>📍 Location</strong>
+                    Madison, Wisconsin
+                </div>
+                <div class="contact-item">
+                    <strong>⏰ Hours</strong>
+                    Mon-Fri 9AM-6PM<br>Weekend events available
+                </div>
+            </div>
+
+            <div class="delivery-options">
+                <h4>🚚 Delivery Options</h4>
+                <div class="delivery-grid">
+                    <div class="delivery-item">
+                        <strong>Local Pickup</strong><br>
+                        Free within 15 miles
+                    </div>
+                    <div class="delivery-item">
+                        <strong>Local Delivery</strong><br>
+                        $15 within 25 miles
+                    </div>
+                    <div class="delivery-item">
+                        <strong>Shipping</strong><br>
+                        Nationwide (3-5 business days)
+                    </div>
+                    <div class="delivery-item">
+                        <strong>Rush Service</strong><br>
+                        Same-day delivery available
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; font-style: italic; margin-top: 2rem; color: #666;">
+            <em>Book 2+ weeks in advance for best availability. Custom themes and colors available upon request.</em>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tiny Treasures. Making memories one bead at a time. ✨</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
