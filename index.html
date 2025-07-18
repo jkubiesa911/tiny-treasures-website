@@ -393,6 +393,83 @@
             display: block;
             margin-bottom: 0.5rem;
         }
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            border: 2px solid #F7717D;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(22, 0, 30, 0.05);
+        }
+
+        .faq-question {
+            background: linear-gradient(135deg, rgba(247, 178, 183, 0.2) 0%, rgba(247, 113, 125, 0.2) 100%);
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2D1B3D;
+            transition: background 0.3s ease;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .faq-question:hover {
+            background: #7F2982;
+            color: white;
+        }
+
+        .faq-question.active {
+            background: #DE639A;
+            color: white;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem 2rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
 
         /* Contact Section */
         .contact-section {
